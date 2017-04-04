@@ -33,4 +33,6 @@ def generate_prime_numbers(n):
 if __name__=='__main__':
 	print generate_prime_numbers(15)
 	print generate_prime_numbers('10')
-	print generate_prime_numbers(200)
+	print generate_prime_numbers([])
+	print generate_prime_numbers({1:1})
+	print generate_prime_numbers(-1)
