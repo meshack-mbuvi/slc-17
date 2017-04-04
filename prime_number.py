@@ -9,18 +9,18 @@ def generate_prime_numbers(n):
 
 	'''
 	primes=[]
-	if isinstance(n,str):
+	if isinstance(n, str):
 		return 'input of type string not allowed'
 	elif n<0:
 		return 'only positive numbers are allowed'
 	elif isinstance(n,float):
 		return 'only whole numbers are allowed'
-	elif type(n)==type(list):
+	elif isinstance(n, list):
 		return 'inputs of type list is not allowed'
-	elif type(n)==type(dict):
+	elif isinstance(n, dict):
 		return 'dictionary inputs not allowed'
 	else:
-		for number in range(0,n+1):
+		for number in range(n+1):
 			if number>13:
 				if not number%2==0 and not number%3==0 and not number%5==0 and not number%7==0 and not number%11==0 and not number%13==0:
 					primes.append(number)
