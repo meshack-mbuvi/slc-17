@@ -1,13 +1,16 @@
 def get_Loan_amount(amount,time,rate):
 	'''
-	This function calculates the accumulated loan amount
+	This function calculates the accumulated loan amount over a period of time
 	:params
 	:args:amount,time,rate
 	:outputs:amount
 
 	'''
-	if time<0:
-		return 'Invalid time'
+	#Allow only numbers
+	if isinstance(amount,str) or isinstance(time,str) or isinstance(rate,str):
+		return 'only number inputs are allowed'
+	elif time<0:#test for negative time
+		return 'Time cannot have negative value'
 	elif amount<0:
 		return 'Amount cannot be negative'
 	else:
