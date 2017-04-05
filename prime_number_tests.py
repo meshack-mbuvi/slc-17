@@ -20,5 +20,6 @@ class prime_numbers(unittest.TestCase):
 	def test_it_works_correctly(self):
 		self.assertEqual(generate_prime_numbers(10),[2,3,5,7])
 		self.assertEqual(generate_prime_numbers(5),[2,3,5])
-if __name__=='__main__':
-	unittest.main()
+#if __name__=='__main__': not needed
+unittest.main()
+	
