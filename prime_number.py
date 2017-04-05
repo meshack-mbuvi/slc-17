@@ -1,38 +1,31 @@
-def generate_prime_numbers(n):
-	'''
-	This function generates prime numbers from 0 to n.
-	:args:n 
-	:return: primes-a list containing all prime numbers from 0 to n
-	:Author: Meshack Mbuvi
-	:Email:meshmbuvi@gmail.com
-	:Phone:+254719800509
-
-	'''
+def prime(n):
 	primes=[]
-	if isinstance(n, str):
-		return 'input of type string not allowed'
-	elif n<0:
-		return 'only positive numbers are allowed'
-	elif isinstance(n,float):
-		return 'only whole numbers are allowed'
-	elif isinstance(n, list):
-		return 'inputs of type list is not allowed'
-	elif isinstance(n, dict):
-		return 'dictionary inputs not allowed'
+	i=0
+	number=0
+	while(i<n):
+		if isprime(number):
+			primes.append(number)
+			i+=1
+			number+=1
+		else:
+			number+=1
+		
+	return primes
+def isprime(number):
+	no_is_prime=False
+	'''
+	This function check whether a number is prime and if true
+	:input:number
+	:return True or False depending on whether number is prime
+	'''
+	if number>13:
+		if not number%2==0 and not number%3==0 and not number%5==0 and not number%7==0 and not number%11==0 and not number%13==0:
+			no_is_prime=True
 	else:
-		for number in range(n+1):
-			if number>13:
-				if not number%2==0 and not number%3==0 and not number%5==0 and not number%7==0 and not number%11==0 and not number%13==0:
-					primes.append(number)
-			else:
-				if number>1 and number<=3:
-					primes.append(number)
-				elif not number%2==0 and not number%3==0 and number>1:
-					primes.append(number)
-		return primes
-#if __name__=='__main__': not needed,
-print generate_prime_numbers(15)
-print generate_prime_numbers('10')
-print generate_prime_numbers([])
-print generate_prime_numbers({1:1})
-print generate_prime_numbers(-1)
+		if number>1 and number<=3:
+			no_is_prime=True
+		elif not number%2==0 and not number%3==0 and number>1:
+			no_is_prime=True
+	return no_is_prime
+print prime(10)
+print prime(14)
