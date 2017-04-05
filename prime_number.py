@@ -1,4 +1,9 @@
 def prime(n):
+	'''
+	:Author: Mbuvi
+    :http://mbuv.wordpress.com
+    :Email: meshmbuvi@gmail.com
+	'''
 	primes=[]
 	i=0
 	number=0
